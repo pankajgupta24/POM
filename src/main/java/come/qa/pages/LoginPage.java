@@ -1,5 +1,6 @@
 package come.qa.pages;
 
+import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;
 import org.openqa.selenium.support.PageFactory;
@@ -20,8 +21,8 @@ public class LoginPage extends Base{
 		PageFactory.initElements(driver, this);
 	}
  public  void login (String un, String pwd){
-	 username.sendKeys(un);
-	 password.sendKeys(pwd);
+	 this.username.sendKeys(un);
+	 this.password.sendKeys(pwd);
 	 login.click();
 	 
 	
