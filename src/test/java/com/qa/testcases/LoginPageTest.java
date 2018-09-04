@@ -6,10 +6,11 @@ import org.testng.annotations.Test;
 import com.qa.testbase.Base;
 import come.qa.pages.LoginPage;
 
-public class LoginPageTest extends Base
+public class LoginPageTest<homePage> extends Base
 {
 	
-	LoginPage loginpage;
+	LoginPage lp;
+	homePage homePage;
 	
 	public LoginPageTest()
 	{
@@ -20,7 +21,7 @@ public class LoginPageTest extends Base
 public void setup()
 {
 	initialization();
-	loginpage= new LoginPage();
+	lp= new LoginPage();
 	
 	
 }
@@ -28,7 +29,7 @@ public void setup()
 public void logintestverify()
 {
 	System.out.println("test execution is in progress");
-	loginpage.login(prop.getProperty("username"), prop.getProperty("password"));
+	lp.login(prop.getProperty("username"), prop.getProperty("password"));
 }
 	
 @AfterMethod

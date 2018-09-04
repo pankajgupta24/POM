@@ -19,10 +19,11 @@ public class LoginPage extends Base{
 	public LoginPage(){
 		PageFactory.initElements(driver, this);
 	}
- public void login (String un, String pwd){
-	 username.sendKeys(prop.getProperty(un));
-	 password.sendKeys(prop.getProperty(pwd));
+ public  void login (String un, String pwd){
+	 username.sendKeys(un);
+	 password.sendKeys(pwd);
 	 login.click();
+	 
 	
  }
 	
